@@ -1,0 +1,23 @@
+@import '../App.scss';
+
+.bar-container {
+  padding-inline-start: 0;
+}
+  
+.bar {
+  display: inline-block;
+  margin-right: 7px;
+  color: $lightGray;
+  font-size: 14px;
+
+  i {
+    margin-left: 6px;
+    margin-right: 4px;
+    border: solid $lightGray;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}

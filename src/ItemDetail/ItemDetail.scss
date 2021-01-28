@@ -1,0 +1,61 @@
+@import '../App.scss';
+
+.item-detail-container {
+  max-width: 1024px;
+  padding: 32px;
+  background-color: white;
+}
+
+.item-detail-first-row {
+  display: flex;
+
+  .item-detail-img-container {
+    margin-right: 16px;
+
+    img {
+      width: 680px;
+    }
+  }
+
+  .item-detail-condition-sold {
+    font-size: 14px;
+    color: $lightGray;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .item-detail-title {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .item-detail-price {
+    font-size: 46px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .item-detail-buy {
+    padding: 10px;
+    background-color: $lightBlue;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.item-detail-description-title {
+  font-size: 28px;
+  color: $blackLetters;
+  margin-bottom: 32px;
+}
+
+.item-detail-description-text {
+  font-size: 16px;
+  color: $lightGray;
+  margin-bottom: 0;
+}

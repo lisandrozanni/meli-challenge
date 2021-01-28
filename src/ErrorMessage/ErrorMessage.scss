@@ -1,0 +1,38 @@
+@import '../App.scss';
+
+.message-container {
+  margin: 16px auto;
+  padding: 16px;
+  border-radius: 4px;
+  max-width: 50%;
+  color: white;
+  background-color: $lightBlue;
+
+  &.error {
+    background-color: red;
+  }
+
+  .message-icon {
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    background: no-repeat transparent url('../assets/danger.png');
+
+    &.error {
+      background: no-repeat transparent url('../assets/cancel.png');
+    }
+  }
+
+  .message-title {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .message-text {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
