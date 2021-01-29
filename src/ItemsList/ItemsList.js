@@ -3,12 +3,12 @@ import './ItemsList.scss';
 import Item from '../Item/Item';
 import CategoryBar from '../CategoryBar/CategoryBar';
 
-function ItemsList(props) {
+function ItemsList({ categories, items }) {
 	return (
 		<div className={'items-list-container'}>
-			<CategoryBar categories={props.categories} />
-			{props.items.slice(0,4).map((item, id) =>
-				<Item key={id} info={item} categories={props.categories}
+			<CategoryBar categories={categories} />
+			{items.slice(0,4).map((item, id) =>
+				<Item key={id} info={item} categories={categories}
 			/>)}
 		</div>
 	);

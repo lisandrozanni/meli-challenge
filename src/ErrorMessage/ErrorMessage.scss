@@ -1,4 +1,4 @@
-@import '../App.scss';
+@import '../assets/variables';
 
 .message-container {
   margin: 16px auto;
@@ -6,7 +6,7 @@
   border-radius: 4px;
   max-width: 50%;
   color: white;
-  background-color: $lightBlue;
+  background-color: $blue;
 
   &.error {
     background-color: red;
@@ -19,10 +19,10 @@
     margin-right: 16px;
     width: 24px;
     height: 24px;
-    background: no-repeat transparent url('../assets/danger.png');
+    background: no-repeat transparent url('../assets/images/danger.png');
 
     &.error {
-      background: no-repeat transparent url('../assets/cancel.png');
+      background: no-repeat transparent url('../assets/images/cancel.png');
     }
   }
 

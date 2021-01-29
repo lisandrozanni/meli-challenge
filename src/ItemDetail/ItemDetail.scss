@@ -1,4 +1,4 @@
-@import '../App.scss';
+@import '../assets/variables';
 
 .item-detail-container {
   max-width: 1024px;
@@ -39,7 +39,7 @@
 
   .item-detail-buy {
     padding: 10px;
-    background-color: $lightBlue;
+    background-color: $blue;
     color: white;
     border-radius: 4px;
     border: none;
@@ -50,7 +50,7 @@
 
 .item-detail-description-title {
   font-size: 28px;
-  color: $blackLetters;
+  color: $black;
   margin-bottom: 32px;
 }
 

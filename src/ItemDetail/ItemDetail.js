@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './ItemDetail.scss';
-import * as helper from '../helper';
+import * as helpers from '../assets/helpers';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Spinner from '../Spinner/Spinner';
 import CategoryBar from '../CategoryBar/CategoryBar';
 
-function ItemDetail(props) {
-	const id = props.match.params.id;
+function ItemDetail({ match, categories }) {
+	const id = match.params.id;
 	const [itemInfo, setItemInfo] = useState({});
 	const [errorMsg, showErrorMsg] = useState({error: false, text: ''});
 
@@ -42,7 +42,7 @@ function ItemDetail(props) {
 		errorMsg.error ? <ErrorMessage error={errorMsg.error} message={errorMsg.text} /> :
 			itemInfo.id ?
 			<div className={'items-list-container'}>
-				<CategoryBar categories={props.categories} />
+				<CategoryBar categories={categories} />
 				<div className={'item-detail-container'}>
 					<div className={'item-detail-first-row'}>
 						<div className={'item-detail-img-container'}>
@@ -54,7 +54,7 @@ function ItemDetail(props) {
 							</p>
 							<h5 className={'item-detail-title'}>{itemInfo.title}</h5>
 							<h3 className={'item-detail-price'}>
-								{helper.formatPrice(itemInfo.price)}
+								{helpers.formatPrice(itemInfo.price)}
 							</h3>
 							<button className={'item-detail-buy'}>Comprar</button>
 						</div>

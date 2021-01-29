@@ -12,7 +12,6 @@ app.get('/api/items', (req, res) => {
 		.catch(error => res.status(500).send(error));
 });
 
-
 app.get('/api/items/:id', (req, res) => {
 	service.getItemDetail(req.params.id)
 		.then(item => res.json(item))
@@ -20,5 +19,5 @@ app.get('/api/items/:id', (req, res) => {
 });
 
 app.listen(8080, () => {
-	console.log('Server corriendo en el puerto 8080');
+	console.log('Server started in port 8080');
 });

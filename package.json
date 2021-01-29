@@ -20,10 +20,9 @@
   },
   "scripts": {
     "all": "concurrently \"npm start\" \"npm run server\"",
-    "server": "nodemon server/index.js",
+    "server": "nodemon backend/index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "concurrently \"npm run server\" \"react-scripts test\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

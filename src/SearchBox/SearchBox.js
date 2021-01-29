@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SearchBox.scss';
-import logo from '../assets/Logo_ML.png';
+import logo from '../assets/images/Logo_ML.png';
 
-export function SearchBox(props) {
+export function SearchBox({ onSubmit }) {
 	const [searchValue, setSearchValue] = useState('');
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		props.onSubmit(searchValue);
+	const handleSubmit = e => {
+		e.preventDefault();
+		onSubmit(searchValue);
 	};
 
 	return (
 		<div className='background-banner'>
-			<form className='search-box-container' onSubmit={(event) => handleSubmit(event)}>
+			<form className='search-box-container' onSubmit={e => handleSubmit(e)}>
 				<Link to={'/'}>
 					<img src={logo} alt='Logo Mercado Libre' />
 				</Link>
 				<input className='search-box-input' type='text' placeholder='Nunca dejes de buscar'
-					onKeyUp={(e) => setSearchValue(e.target.value)} />
+					onKeyUp={e => setSearchValue(e.target.value)} />
 				<button type='submit' className='search-box-btn' data-testid='search-box-icon' />
 			</form>
 		</div>

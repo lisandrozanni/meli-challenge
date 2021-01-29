@@ -1,13 +1,13 @@
 import React from 'react';
 import './CategoryBar.scss';
 
-function CategoryBar(props) {
+function CategoryBar({ categories }) {
 	return (
 		<ul className={'bar-container'}>
-			{props.categories ? props.categories.map((category, id) =>
+			{categories ? categories.map((category, id) =>
 				<li className={'bar'} key={id}>
 					{category}
-					{id !== props.categories.length - 1? <i/> : null}
+					{id !== categories.length - 1? <i/> : null}
 				</li>)
 				: null}
 		</ul>

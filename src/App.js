@@ -13,7 +13,7 @@ function App() {
 	const [results, setResults] = useState({});
 	const [loading, setLoading] = useState(false);
 
-	const getResults = (query) => {
+	const getResults = query => {
 		setLoading(true);
 		fetch(`http://localhost:8080/api/items?q=${query}`)
 			.then(response => response.json())
@@ -42,7 +42,7 @@ function App() {
 				<meta name='description' content='La comunidad de compra y venta online más grande de América Latina.' />
 				<meta name='keywords' content='mercadolibre, comprar, vender' />
 			</Helmet>
-			<SearchBox onSubmit={(query) => getResults(query)}/>
+			<SearchBox onSubmit={query => getResults(query)} />
 			{
 				loading ? <Spinner /> :
 				<Switch>
@@ -64,12 +64,7 @@ function App() {
 								: <Redirect to={'/'} />
 						}
 					</Route>
-					<Route
-						path='/items/:id'
-						render={(props) => (
-							<ItemDetail {...props} categories={results.categories} />
-						)}
-					/>
+					<Route path='/items/:id' component={props => <ItemDetail {...props} categories={results.categories} /> } />
 				</Switch>
 			}
 		</div>

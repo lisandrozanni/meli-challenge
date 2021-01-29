@@ -1,4 +1,4 @@
-@import '../App.scss';
+@import '../assets/variables';
 
 .lds-ring {
 	display: inline-block;
@@ -16,10 +16,10 @@
 	width: 51px;
 	height: 51px;
 	margin: 6px;
-	border: 6px solid $lightBlue;
+	border: 6px solid $blue;
 	border-radius: 50%;
 	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-	border-color: $lightBlue transparent transparent transparent;
+	border-color: $blue transparent transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {
