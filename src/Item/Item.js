@@ -17,7 +17,7 @@ function Item({ info, categories }) {
 						<p>{info.title}</p>
 					</Link>
 				</div>
-				<div className={'item-condition'}>
+				<div className={'item-location'}>
 					<p>{info.location}</p>
 				</div>
 			</div>

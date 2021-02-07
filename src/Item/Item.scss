@@ -55,11 +55,27 @@
   background-size: 20px 20px;
 }
 
-.item-condition {
+.item-location {
   flex: 1;
   p {
     color: $gray;
     font-size: 12px;
     position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .item-title p {
+    font-size: 14px;
+  }
+
+  .item-price {
+    margin: 10px 0;
+    font-size: 20px;
   }
 }

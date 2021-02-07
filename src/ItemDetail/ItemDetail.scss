@@ -59,3 +59,52 @@
   color: $lightGray;
   margin-bottom: 0;
 }
+
+@media (max-width: 480px) {
+  .item-detail-container {
+    padding: 20px;
+  }
+
+  .item-detail-first-row {
+    flex-direction: column;
+    .item-detail-img-container {
+      text-align: center;
+      img {
+        width: 300px;
+      }
+    }
+
+    .item-detail-condition-sold {
+      font-size: 12px;
+    }
+
+    .item-detail-title {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    .item-detail-price {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .item-detail-description-title {
+    font-size: 24px;
+    margin-top: 46px;
+    margin-bottom: 24px;
+  }
+  .item-detail-description-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item-detail-first-row {
+    .item-detail-img-container {
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
