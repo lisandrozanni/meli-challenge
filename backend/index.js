@@ -5,6 +5,7 @@ const service = require('./service');
 const app = express();
 
 app.use(cors());
+app.set('port', 8080);
 
 app.get('/api/items', (req, res) => {
 	service.getItemsList(req.query.q)
@@ -18,6 +19,6 @@ app.get('/api/items/:id', (req, res) => {
 		.catch(error => res.status(error.status).send(error));
 });
 
-app.listen(8080, () => {
-	console.log('Server started in port 8080');
+app.listen(app.get('port'), () => {
+	console.log(`Server on port ${app.get('port')}`);
 });

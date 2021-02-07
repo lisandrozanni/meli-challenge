@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './SearchBox.scss';
 import logo from '../assets/images/Logo_ML.png';
 
-export function SearchBox({ onSubmit }) {
+function SearchBox({ onSubmit }) {
 	const [searchValue, setSearchValue] = useState('');
 
 	const handleSubmit = e => {
@@ -24,3 +24,5 @@ export function SearchBox({ onSubmit }) {
 		</div>
 	);
 }
+
+export default SearchBox;

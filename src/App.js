@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Switch, Route, Redirect, useHistory } from 'react-router-dom';
-import { SearchBox } from './SearchBox/SearchBox';
+import SearchBox from './SearchBox/SearchBox';
 import ItemsList from './ItemsList/ItemsList';
 import ItemDetail from './ItemDetail/ItemDetail';
 import ErrorMessage from './ErrorMessage/ErrorMessage';

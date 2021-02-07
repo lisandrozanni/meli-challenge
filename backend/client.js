@@ -9,7 +9,7 @@ requestPromise = url => {
       });
       response.on('end', () => {
         resolve(JSON.parse(body));
-      })
+      });
     }).on('error', error => reject(error));
   })
 };
@@ -24,11 +24,13 @@ exports.getItemData = query => {
       return Promise.all([
         requestPromise(`https://api.mercadolibre.com/items/${query}/description`),
         requestPromise(`https://api.mercadolibre.com/categories/${item.category_id}`)
-      ]).then(responses => {
-        return {
-          item: item, 
-          description: responses[0], 
-          categories: responses[1]};
-      });
+      ])
+    .then(responses => {
+      return {
+        item: item, 
+        description: responses[0],
+        categories: responses[1]
+      };
+    });
     });
 };

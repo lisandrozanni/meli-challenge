@@ -1,10 +1,10 @@
 const client = require('./client');
 
-const sanitizeResponse = (response) => {
+const sanitizeResponse = response => {
 	if (response.error) throw response;
 };
 
-exports.getItemsList = (query) => {
+exports.getItemsList = query => {
 	return client.search(query)
 		.then((response => {
 			const author = {
