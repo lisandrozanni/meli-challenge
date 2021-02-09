@@ -1,6 +1,6 @@
 # Mercado Libre Challenge
 
-El proyecto está hecho con React en el lado del cliente y con Node.js junto a Express en el lado del servidor. Se utilizó Sass en lugar de CSS para los estilos.
+El proyecto está hecho con `React` en el lado del cliente y con `Node.js` junto a `Express` en el lado del servidor. Se utilizó `Sass` en lugar de CSS para los estilos. También se realizaron los tests con `Jest` utilizando `React Testing Library`, librería ya integrada en create-react-app.
 
 ## Configuración
 
@@ -11,7 +11,14 @@ npm install
 
 Luego, ejecutamos el comando para levantar en simultáneo el cliente y el servidor:
 ```
-npm run all
+npm run app
 ```
 
-Esto se logra gracias a la dependencia <b>concurrently</b>, lo cual permite tener dos puertos distintos para poder probar de manera integrada toda la aplicación.
+Esto se logra gracias al módulo `concurrently`, el cual permite tener dos puertos distintos para poder probar de manera integrada toda la aplicación.
+
+
+Para correr los tests ejecutamos:
+```
+npm run test
+```
+
