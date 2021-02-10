@@ -40,11 +40,11 @@ exports.getItemsList = query => {
 exports.getItemDetail = query => {
 	return client.getItemData(query)
 		.then(responses => {
-			Object.values(responses).forEach(resp => sanitizeResponse(resp));
+			responses.forEach(resp => sanitizeResponse(resp));
 			return responses;
 		})
 		.then(responses => {
-			const { item, description, categories } = responses;
+			const [ item, description ] = responses;
 			const [ amount, decimals ] = item.price.toString().split('.');
 			return {
 				author: {
@@ -63,8 +63,7 @@ exports.getItemDetail = query => {
 					condition: item.condition,
 					free_shipping: item.shipping.free_shipping,
 					sold_quantity: item.sold_quantity,
-					description: description.plain_text,
-					categories: categories.path_from_root.map(elem => elem.name)
+					description: description.plain_text
 				}
 			}
 		});
